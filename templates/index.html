@@ -1,11 +1,95 @@
 {% extends 'bases/base.html' %}
+{% load static %}
 {% block title %}Home{% endblock title %}
 {% block content %}
-<div class="h-100 mx-5 py-5 border-end border-start border-3">
-    <div class="container">
-        <p class="h3 fw-bold">Web Developer</p>
-        <p class="h3 fw-bold">Sparsh Chaurasia</p>
+<div class="mx-5 border-end border-start border-3">
+    <!-- Hero Section -->
+    <div class="d-flex">
+        <div class="border-end border-3 w-50 d-flex flex-column justify-content-center">
+            <div style="margin-left: 7rem;">
+                <h1 class="fw-bold">Web Developer</h1>
+                <h1 class="fw-bold m-0">Sparsh Chaurasia</h1>
+                <p class="mt-2">High level experience in web design and developement. Believe in quality work.</p>
+                <button class="btn btn-primary">Contact Me</button>
+                <h2 class="mt-4">
+                    <span class="badge bg-primary">Python</span>
+                    <span class="badge bg-danger">HTML</span>
+                    <span class="badge bg-info text-dark">CSS</span>
+                    <span class="badge bg-warning text-dark">JavaScript</span>
+                </h2>
+            </div>
+        </div>
+        <div class="w-50">
+            <img src="{% static 'images/doge1.png' %}" alt="doge" srcset="" style="width: 20rem; height: auto; filter: grayscale(95%); display: block; margin: auto; margin-top: 5rem;">
+        </div>
     </div>
-    <span class="position-absolute start-0 vw-100 my-5 border-bottom border-3"></span>
+    <span class="position-absolute start-0 vw-100 border-bottom border-3"></span>
+    <!-- Projects -->
+    <div style="padding-left: 7rem; padding-top: 4rem;">
+        <h1 class="fw-bold">Latest Projects</h1>
+        <div class="d-flex">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Discord Bot</h5>
+                    <span class="badge bg-primary">Python</span>
+                    <p class="card-text">A general purpose discord bot built with discord.py api wrapper in python.</p>
+                    <a href="#" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Chat App</h5>
+                    <span class="badge bg-primary">Python</span>
+                    <p class="card-text">A command line interface chat app built with pyhton - socket and multithreading.</p>
+                    <a href="#" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">RFID Attendance</h5>
+                    <span class="badge bg-primary">Python</span>
+                    <span class="badge bg-success">Django</span>
+                    <span class="badge bg-danger">HTML</span>
+                    <span class="badge bg-info text-dark">CSS</span>
+                    <span class="badge bg-warning text-dark">JavaScript</span>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam hic repudiandae alias atque corrupti optio perspiciatis autem numquam officia quisquam quasi earum, ratione porro ducimus ea. Esse magni voluptas aut.</p>
+                    <a href="#" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Voting System</h5>
+                    <span class="badge bg-primary">Python</span>
+                    <span class="badge bg-success">Django</span>
+                    <span class="badge bg-danger">HTML</span>
+                    <span class="badge bg-info text-dark">CSS</span>
+                    <span class="badge bg-warning text-dark">JavaScript</span>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam hic repudiandae alias atque corrupti optio perspiciatis autem numquam officia quisquam quasi earum, ratione porro ducimus ea. Esse magni voluptas aut.</p>
+                    <a href="#" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact -->
+    <span class="position-absolute start-0 vw-100 border-bottom border-3"></span>
+    <div style="padding-left: 7rem; padding-top: 4rem;">
+        <h1 class="fw-bold">Contact</h1>
+        <div class="input-group mb-3 input-group-lg">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3 input-group-lg">
+            <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon2">
+            <span class="input-group-text" id="basic-addon2">@example.com</span>
+        </div>
+        <div class="input-group mb-3 input-group-lg">
+            <span class="input-group-text" id="basic-addon1">Subject</span>
+            <input type="text" class="form-control" placeholder="Subject" aria-label="Subject" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group input-group-lg">
+            <span class="input-group-text">Message</span>
+            <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+    </div>
 </div>
 {% endblock content %}
