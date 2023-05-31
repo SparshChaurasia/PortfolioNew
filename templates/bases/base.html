@@ -28,9 +28,9 @@
     {% block javascript %}{% endblock javascript %}
 </head>
 <header>
-    {% comment %} {% include 'includes/navbar.html' %} {% endcomment %}
+    {% include 'includes/navbar.html' %}
 </header>
-<body style="font-family: 'Roboto Mono', monospace; background-color:#F8F9FA;">
+<body style="font-family: 'Roboto Mono', monospace; background-color:#F8F9FA; height: 100vh;">
     {% block content %}{% endblock content %}
 </body>
 </html>
