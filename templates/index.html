@@ -1,79 +1,96 @@
 {% extends 'bases/base.html' %}
 {% load static %}
 {% block title %}Home{% endblock title %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock stylesheets %}
 {% block content %}
-<div class="mx-5 border-end border-start border-3">
+<div class="mx-5 border-end border-start border-3" style="padding: 0 7rem;">
     <!-- Hero Section -->
     <div class="d-flex">
-        <div class="border-end border-3 w-50 d-flex flex-column justify-content-center">
-            <div style="margin-left: 7rem;">
-                <h1 class="fw-bold">Web Developer</h1>
-                <h1 class="fw-bold m-0">Sparsh Chaurasia</h1>
-                <p class="mt-2">High level experience in web design and developement. Believe in quality work.</p>
-                <button class="btn btn-primary">Contact Me</button>
-                <h2 class="mt-4">
-                    <span class="badge bg-primary">Python</span>
-                    <span class="badge bg-danger">HTML</span>
-                    <span class="badge bg-info text-dark">CSS</span>
-                    <span class="badge bg-warning text-dark">JavaScript</span>
+        <div class="section border-end border-3 w-50 d-flex flex-column justify-content-center">
+            <div>
+                <h1 class="fw-bold" style="font-size: 3.5rem;">Web Developer</h1>
+                <h1 class="fw-bold m-0" style="font-size: 3.5rem;">Sparsh Chaurasia</h1>
+                <p class="mt-2 text-muted" style="font-size: 1.25rem;">High level experience in web design and developement. Believe in quality work.</p>
+                <button class="btn btn-primary btn-lg"><span class="h3 fw-bold">Contact Me</span></button>
+                <h2 class="mt-5">
+                    <span class="badge bg-primary mb-2 me-2">Python</span>
+                    <span class="badge bg-danger mb-2 me-2">HTML</span><br>
+                    <span class="badge bg-info text-dark mb-2 me-2">CSS</span>
+                    <span class="badge bg-warning text-dark mb-2 me-2">JavaScript</span>
                 </h2>
             </div>
         </div>
-        <div class="w-50">
-            <img src="{% static 'images/doge1.png' %}" alt="doge" srcset="" style="width: 20rem; height: auto; filter: grayscale(95%); display: block; margin: auto; margin-top: 5rem;">
+        <div class="w-50 d-flex justify-content-center align-items-center">
+            <img src="{% static 'images/doge1.png' %}" alt="doge" srcset="" style="width: 20rem; height: auto; filter: grayscale(95%);">
         </div>
     </div>
     <span class="position-absolute start-0 vw-100 border-bottom border-3"></span>
     <!-- Projects -->
-    <div style="padding-left: 7rem; padding-top: 4rem;">
-        <h1 class="fw-bold">Latest Projects</h1>
-        <div class="d-flex">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Discord Bot</h5>
-                    <span class="badge bg-primary">Python</span>
-                    <p class="card-text">A general purpose discord bot built with discord.py api wrapper in python.</p>
-                    <a href="#" class="btn btn-primary">View Project</a>
+    <div class="section">
+        <h1 class="fw-bold section__heading">Latest Projects</h1>
+        <div class="container m-0 p-0 overflow-hidden">
+            <div class="row w-100 gx-5 gy-5">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card border-0">
+                        <img src="{% static 'images/projects/discord-bot.jpg' %}" alt="discord bot" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Discord Bot</h5>
+                            <span class="badge bg-primary">Python</span>
+                            <p class="card-text">A general purpose discord bot built with discord.py api wrapper in python.</p>
+                            <a href="#">View Project</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Chat App</h5>
-                    <span class="badge bg-primary">Python</span>
-                    <p class="card-text">A command line interface chat app built with pyhton - socket and multithreading.</p>
-                    <a href="#" class="btn btn-primary">View Project</a>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card border-0">
+                        <img src="{% static 'images/projects/chat-app.jpg' %}" alt="chat app" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Chat App</h5>
+                            <span class="badge bg-primary">Python</span>
+                            <p class="card-text">A command line interface chat app built with pyhton - socket and multithreading.</p>
+                            <a href="#">View Project</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">RFID Attendance</h5>
-                    <span class="badge bg-primary">Python</span>
-                    <span class="badge bg-success">Django</span>
-                    <span class="badge bg-danger">HTML</span>
-                    <span class="badge bg-info text-dark">CSS</span>
-                    <span class="badge bg-warning text-dark">JavaScript</span>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam hic repudiandae alias atque corrupti optio perspiciatis autem numquam officia quisquam quasi earum, ratione porro ducimus ea. Esse magni voluptas aut.</p>
-                    <a href="#" class="btn btn-primary">View Project</a>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card border-0">
+                        <img src="{% static 'images/projects/rfid-attendance.jpg' %}" alt="rfid attendance" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">RFID Attendance</h5>
+                            <span class="badge bg-primary">Python</span>
+                            <span class="badge bg-success">Django</span>
+                            <span class="badge bg-danger">HTML</span>
+                            <span class="badge bg-info text-dark">CSS</span>
+                            <span class="badge bg-warning text-dark">JavaScript</span>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam hic repudiandae alias atque corrupti.</p>
+                            <a href="#">View Project</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Voting System</h5>
-                    <span class="badge bg-primary">Python</span>
-                    <span class="badge bg-success">Django</span>
-                    <span class="badge bg-danger">HTML</span>
-                    <span class="badge bg-info text-dark">CSS</span>
-                    <span class="badge bg-warning text-dark">JavaScript</span>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam hic repudiandae alias atque corrupti optio perspiciatis autem numquam officia quisquam quasi earum, ratione porro ducimus ea. Esse magni voluptas aut.</p>
-                    <a href="#" class="btn btn-primary">View Project</a>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card border-0">
+                        <img src="{% static 'images/projects/voting.jpg' %}" alt="voting system" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Voting System</h5>
+                            <span class="badge bg-primary">Python</span>
+                            <span class="badge bg-success">Django</span>
+                            <span class="badge bg-danger">HTML</span>
+                            <span class="badge bg-info text-dark">CSS</span>
+                            <span class="badge bg-warning text-dark">JavaScript</span>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam hic repudiandae alias atque corrupti.</p>
+                            <a href="#">View Project</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Contact -->
     <span class="position-absolute start-0 vw-100 border-bottom border-3"></span>
-    <div style="padding-left: 7rem; padding-top: 4rem;">
-        <h1 class="fw-bold">Contact</h1>
+    <div class="section">
+        <h1 class="fw-bold section__heading">Contact</h1>
         <div class="input-group mb-3 input-group-lg">
             <span class="input-group-text" id="basic-addon1">@</span>
             <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
