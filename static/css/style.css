@@ -5,3 +5,10 @@
 .section__heading {
     margin-bottom: 2rem;
 }
+
+.custom__button {
+    padding: 0.75rem;
+    background-color: #FDC738;
+    border-radius: 0.25rem;
+    box-shadow: 5px 5px #000;
+}
