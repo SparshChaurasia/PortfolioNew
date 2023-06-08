@@ -6,7 +6,7 @@
 {% endblock stylesheets %}
 {% block content %}
 <div class="mx-5 border-end border-start border-3" style="padding: 0 7rem;">
-    <!-- Hero Section -->
+    <!-- Hero -->
     <div class="d-flex">
         <div class="section border-end border-3 w-50 d-flex flex-column justify-content-center">
             <div>
@@ -39,6 +39,7 @@
             <p style="font-size: 1.25rem;">A passionate developer and a computer enthusiast. Since my childhood I have always had a keen interest in computing more specifically, in web and networking. The Internet has always fascinated me and now I have decided to persue this professionally woking as a developer.</p>
         </div>
     </div>
+    <!-- Skills -->
     <span class="position-absolute start-0 vw-100 border-bottom border-3"></span>
     <div class="section">
         <h1 class="fw-bold section__heading">Skills</h1>
@@ -73,12 +74,30 @@
             </div>
         </div>
     </div>
-    <span class="position-absolute start-0 vw-100 border-bottom border-3"></span>
     <!-- Projects -->
+    <span class="position-absolute start-0 vw-100 border-bottom border-3"></span>
     <div class="section">
         <h1 class="fw-bold section__heading">Latest Projects</h1>
         <div class="container m-0 p-0 overflow-hidden">
             <div class="row w-100 gx-5 gy-5">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card border-0">
+                        <img src="{% static 'images/projects/voting.jpg' %}" alt="voting system" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Voting System</h5>
+                            <span class="badge bg-primary">Python</span>
+                            <span class="badge bg-success">Django</span>
+                            <span class="badge bg-danger">HTML</span>
+                            <span class="badge bg-info text-dark">CSS</span>
+                            <span class="badge bg-warning text-dark">JavaScript</span>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam hic repudiandae alias atque corrupti.</p>
+                            <div class="w-100 px-4 d-flex justify-content-between">
+                                <a href="https://github.com/SparshChaurasia/VotingApp" target="_blank" class="text-decoration-none text-dark">View on Github <i class="fa-brands fa-github"></i></a>
+                                <a href="http://irps.pythonanywhere.com/" target="_blank" class="text-decoration-none text-dark">View Live <i class="fa-solid fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card border-0">
                         <img src="{% static 'images/projects/discord-bot.jpg' %}" alt="discord bot" class="card-img-top">
@@ -86,18 +105,10 @@
                             <h5 class="card-title">Discord Bot</h5>
                             <span class="badge bg-primary">Python</span>
                             <p class="card-text">A general purpose discord bot built with discord.py api wrapper in python.</p>
-                            <a href="#">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card border-0">
-                        <img src="{% static 'images/projects/chat-app.jpg' %}" alt="chat app" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Chat App</h5>
-                            <span class="badge bg-primary">Python</span>
-                            <p class="card-text">A command line interface chat app built with pyhton - socket and multithreading.</p>
-                            <a href="#">View Project</a>
+                            <div class="w-100 px-4 d-flex justify-content-between">
+                                <a href="https://github.com/SparshChaurasia/DiscordBot" target="_blank" class="text-decoration-none text-dark">View on Github <i class="fa-brands fa-github"></i></a>
+                                <a href="" target="_blank" class="text-decoration-none text-dark">View Live <i class="fa-solid fa-link"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -112,22 +123,24 @@
                             <span class="badge bg-info text-dark">CSS</span>
                             <span class="badge bg-warning text-dark">JavaScript</span>
                             <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam hic repudiandae alias atque corrupti.</p>
-                            <a href="#">View Project</a>
+                            <div class="w-100 px-4 d-flex justify-content-between">
+                                <a href="https://github.com/SparshChaurasia/RFIDAttendance" target="_blank" class="text-decoration-none text-dark">View on Github <i class="fa-brands fa-github"></i></a>
+                                <a href="" target="_blank" class="text-decoration-none text-dark">View Live <i class="fa-solid fa-link"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card border-0">
-                        <img src="{% static 'images/projects/voting.jpg' %}" alt="voting system" class="card-img-top">
+                        <img src="{% static 'images/projects/chat-app.jpg' %}" alt="chat app" class="card-img-top">
                         <div class="card-body">
-                            <h5 class="card-title">Voting System</h5>
+                            <h5 class="card-title">Chat App</h5>
                             <span class="badge bg-primary">Python</span>
-                            <span class="badge bg-success">Django</span>
-                            <span class="badge bg-danger">HTML</span>
-                            <span class="badge bg-info text-dark">CSS</span>
-                            <span class="badge bg-warning text-dark">JavaScript</span>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam hic repudiandae alias atque corrupti.</p>
-                            <a href="#">View Project</a>
+                            <p class="card-text">A command line interface chat app built with pyhton - socket and multithreading.</p>
+                            <div class="w-100 px-4 d-flex justify-content-between">
+                                <a href="https://github.com/SparshChaurasia/ChatAppRewrite" target="_blank" class="text-decoration-none text-dark">View on Github <i class="fa-brands fa-github"></i></a>
+                                <a href="" target="_blank" class="text-decoration-none text-dark">View Live <i class="fa-solid fa-link"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
