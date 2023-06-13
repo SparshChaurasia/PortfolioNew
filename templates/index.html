@@ -181,23 +181,23 @@
                     </div>
                 </div>
             </div>
-            <form action="#" method="post" class="w-100">
+            <form action="{% url 'submit_contact_form' %}" method="post" class="w-100">
                 {% csrf_token %}
                 <div class="input-group mb-3 input-group-lg">
                     <span class="input-group-text" id="basic-addon1">@</span>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" name="username" placeholder="Username*" aria-label="Username" aria-describedby="basic-addon1" required>
                 </div>
                 <div class="input-group mb-3 input-group-lg">
-                    <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon2">
+                    <input type="email" class="form-control" name="email" placeholder="Email*" aria-label="Email" aria-describedby="basic-addon2" required>
                     <span class="input-group-text" id="basic-addon2">@example.com</span>
                 </div>
                 <div class="input-group mb-3 input-group-lg">
                     <span class="input-group-text" id="basic-addon1">Subject</span>
-                    <input type="text" class="form-control" placeholder="Subject" aria-label="Subject" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" name="subject" placeholder="Optional Title" aria-label="Subject" aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group input-group-lg">
                     <span class="input-group-text">Message</span>
-                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                    <textarea class="form-control" name="message" placeholder="Your message*" aria-label="With textarea" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-lg custom__button mt-4">Send Message <i class="fa-solid fa-arrow-right"></i></button>
             </form>
