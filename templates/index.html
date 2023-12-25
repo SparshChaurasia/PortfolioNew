@@ -5,32 +5,33 @@
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 {% endblock stylesheets %}
 {% block content %}
-<div class="mx-5 border-end border-start border-3" style="padding: 0 7rem;">
+<div>
     <!-- Hero -->
-    <div class="d-flex">
-        <div class="section border-end border-3 w-50 d-flex flex-column justify-content-center">
-            <div>
-                <h1 class="fw-bold" style="font-size: 3rem;">Full-Stack Developer</h1>
-                <h1 class="fw-bold m-0" style="font-size: 3rem;">Sparsh Chaurasia</h1>
-                <p class="mt-2 text-muted" style="font-size: 1.25rem;">High level experience in web design and developement. Believe in quality work.</p>
-                <a href="#contact" class="btn btn-lg custom__button"><span class="h4 fw-bold">Contact Me</span></a>
-                <h2 class="mt-5">
-                    <span class="badge bg-danger mb-2 me-2"><i class="fa-brands fa-html5"></i> HTML</span>
-                    <span class="badge bg-info text-dark mb-2 me-2"><i class="fa-brands fa-css3"></i> CSS</span>
-                    <span class="badge bg-warning text-dark mb-2 me-2"><i class="fa-brands fa-square-js"></i> JavaScript</span><br>
-                    <span class="badge bg-primary mb-2 me-2"><i class="fa-brands fa-python"></i> Python</span>
-                    <span class="badge bg-success mb-2 me-2"><i class="fa-solid fa-d"></i> Django</span>
-                    <span class="badge mb-2 me-2" style="background: purple;"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
-                </h2>
+    <div class="section d-flex" id="#hero" style="background-image: url({% static 'images/background.png' %}); background-size: cover;">
+        <div>
+            <h1 class="fw-bold m-0" style="font-family: var(--heading-font); font-size: 3rem;">Sparsh Chaurasia</h1>
+            <h3 class="fw-bold">Web Developer</h3>
+            <p class="mt-4" style="font-size: 1.25rem;">Hi there, I'm Sparsh, self-taught web developer with a passion for turning ideas into pixel-perfect realities.</p>
+            <div class="mt-4 d-flex align-items-center"><span class="fw-bold">Reach out</span> 
+                <a class="ps-2" target="_blank" href="mailto:sparshchaurasia0021@gmail.com">[Email]</a>
+                <a class="ps-2" target="_blank" href="http://github.com/SparshChaurasia/">[Github]</a>
+                <a class="ps-2" target="_blank" aria-current="page" href="https://discord.gg/Fh5CctFSXP">[Discord]</a>
+                <a class="ps-2" target="_blank" aria-current="page" href="https://www.instagram.com/sparshchaurasia0021/">[Instagram]</a>
+            </div>
+            <div class="mt-4">
+                <span class="fw-bold">Navigation</span> 
+                <ul class="ps-5" style="list-style-type: none;">
+                    <li><a href="#home">[Home]</a></li>
+                    <li><a href="#skills">[Skills]</a></li>
+                    <li><a href="#projects">[Projects]</a></li>
+                    <li><a href="#contact">[Contact]</a></li>
+                </ul>
             </div>
         </div>
-        <div class="w-50 d-flex justify-content-center align-items-center">
-            <img src="{% static 'images/doge1.png' %}" alt="doge1" srcset="" style="width: 20rem; height: auto; filter: grayscale(95%);">
-        </div>
     </div>
-    <span class="position-absolute start-0 vw-100 border-bottom border-3"></span>
+    {% comment %} <span class="position-absolute start-0 vw-100 border-bottom border-3"></span> {% endcomment %}
     <!-- About -->
-    <div class="d-flex">
+    {% comment %} <div class="d-flex">
         <div class="d-flex align-items-center border-end border-3 me-5 pe-5">
             <img src="{% static 'images/doge2.png' %}" alt="doge2" srcset="" style="width: 15rem; height: auto; filter: grayscale(95%);">
         </div>
@@ -38,11 +39,19 @@
             <h1 class="fw-bold section__heading">About Me</h1>
             <p style="font-size: 1.25rem;">A passionate developer and a computer enthusiast. Since my childhood I have always had a keen interest in computing more specifically, in web and networking. The Internet has always fascinated me and now I have decided to persue this professionally woking as a developer.</p>
         </div>
-    </div>
+    </div> {% endcomment %}
     <!-- Skills -->
     <span class="position-absolute start-0 vw-100 border-bottom border-3"></span>
-    <div class="section">
+    <div class="section" id="skills">
         <h1 class="fw-bold section__heading">Skills</h1>
+        {% comment %} <h2 class="mt-5">
+        <span class="badge bg-danger mb-2 me-2"><i class="fa-brands fa-html5"></i> HTML</span>
+        <span class="badge bg-info text-dark mb-2 me-2"><i class="fa-brands fa-css3"></i> CSS</span>
+        <span class="badge bg-warning text-dark mb-2 me-2"><i class="fa-brands fa-square-js"></i> JavaScript</span><br>
+        <span class="badge bg-primary mb-2 me-2"><i class="fa-brands fa-python"></i> Python</span>
+        <span class="badge bg-success mb-2 me-2"><i class="fa-solid fa-d"></i> Django</span>
+        <span class="badge mb-2 me-2" style="background: purple;"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+        h2> {% endcomment %}
         <div class="d-flex">
             <div class="d-flex flex-column align-items-center me-5" style="width: 3rem;">
                 <img src="{% static 'images/skills/html.svg' %}" alt="" srcset="">
@@ -76,7 +85,7 @@
     </div>
     <!-- Projects -->
     <span class="position-absolute start-0 vw-100 border-bottom border-3"></span>
-    <div class="section">
+    <div class="section" id="projects">
         <h1 class="fw-bold section__heading">Latest Projects</h1>
         <div class="container m-0 p-0 overflow-hidden">
             <div class="row w-100 gx-5 gy-5">

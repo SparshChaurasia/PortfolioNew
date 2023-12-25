@@ -30,7 +30,9 @@
     <header>
         {% include 'includes/navbar.html' %}
     </header>
-    {% block content %}{% endblock content %}
+    <main class="border-end border-start border-3 section_margin">
+        {% block content %}{% endblock content %}
+    </main>
     {% include 'includes/footer.html' %}
 </body>
 </html>
