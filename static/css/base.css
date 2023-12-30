@@ -2,15 +2,13 @@
 :root {
     /*========== Font and typography ==========*/
     --heading-font: 'Raleway', sans-serif;
-    --body-font: 'Roboto Mono', monospace;
-    --body-font-size: 1.2rem;
+    --body-font: 'DM Mono', monospace;
 }
 
 /*========== BASE ==========*/
 body {
-    background-color: #ffffff;
+    background-color: #f7f8faf8;
     font-family: var(--body-font) !important;
-    font-size: var(--body-font-size) !important;
     line-height: 1.8 !important;
 }
 

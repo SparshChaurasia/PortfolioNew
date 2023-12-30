@@ -1,5 +1,6 @@
 {% extends 'bases/base.html' %}
 {% load static %}
+{% load random_numbers %}
 {% block title %}Home{% endblock title %}
 {% block stylesheets %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -7,11 +8,13 @@
 {% block content %}
 <div>
     <!-- Hero -->
-    <div class="section d-flex" id="#hero" style="background-image: url({% static 'images/background.png' %}); background-size: cover;">
-        <div>
-            <h1 class="fw-bold m-0" style="font-family: var(--heading-font); font-size: 3rem;">Sparsh Chaurasia</h1>
-            <h3 class="fw-bold">Web Developer</h3>
-            <p class="mt-4" style="font-size: 1.25rem;">Hi there, I'm Sparsh, self-taught web developer with a passion for turning ideas into pixel-perfect realities.</p>
+    <div class="section d-flex" id="#hero">
+        <video class="video_bg" src="{% static "videos/" %}{% random_int 1 4 %}.mp4" autoplay muted loop>
+        </video>
+        <div class="section_wrapper">
+            <h1 class="fw-bold m-0" style="font-family: var(--heading-font);">Sparsh Chaurasia</h1>
+            <h5 class="fw-bold">Web Developer</h5>
+            <p class="mt-4">Hi there, I'm Sparsh, self-taught web developer with a passion for turning ideas into pixel-perfect realities.</p>
             <div class="mt-4 d-flex align-items-center"><span class="fw-bold">Reach out</span> 
                 <a class="ps-2" target="_blank" href="mailto:sparshchaurasia0021@gmail.com">[Email]</a>
                 <a class="ps-2" target="_blank" href="http://github.com/SparshChaurasia/">[Github]</a>
@@ -41,122 +44,125 @@
         </div>
     </div> {% endcomment %}
     <!-- Skills -->
-    <span class="position-absolute start-0 vw-100 border-bottom border-3"></span>
+    <span class="position-absolute start-0 vw-100 border-bottom border-1"></span>
     <div class="section" id="skills">
-        <h1 class="fw-bold section__heading">Skills</h1>
-        {% comment %} <h2 class="mt-5">
-        <span class="badge bg-danger mb-2 me-2"><i class="fa-brands fa-html5"></i> HTML</span>
-        <span class="badge bg-info text-dark mb-2 me-2"><i class="fa-brands fa-css3"></i> CSS</span>
-        <span class="badge bg-warning text-dark mb-2 me-2"><i class="fa-brands fa-square-js"></i> JavaScript</span><br>
-        <span class="badge bg-primary mb-2 me-2"><i class="fa-brands fa-python"></i> Python</span>
-        <span class="badge bg-success mb-2 me-2"><i class="fa-solid fa-d"></i> Django</span>
-        <span class="badge mb-2 me-2" style="background: purple;"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
-        h2> {% endcomment %}
-        <div class="d-flex">
-            <div class="d-flex flex-column align-items-center me-5" style="width: 3rem;">
-                <img src="{% static 'images/skills/html.svg' %}" alt="" srcset="">
-                <p>HTML</p>
-            </div>
-            <div class="d-flex flex-column align-items-center me-5" style="width: 3rem;">
-                <img src="{% static 'images/skills/css.svg' %}" alt="" srcset="">
-                <p>CSS</p>
-            </div>
-            <div class="d-flex flex-column align-items-center me-5" style="width: 3rem;">
-                <img src="{% static 'images/skills/javascript.svg' %}" alt="" srcset="">
-                <p>JavaScript</p>
-            </div>
-            <div class="d-flex flex-column align-items-center me-5" style="width: 3rem;">
-                <img src="{% static 'images/skills/bootstrap.svg' %}" alt="" srcset="">
-                <p>Bootstrap</p>
-            </div>
-            <div class="d-flex flex-column align-items-center me-5">
-                <img src="{% static 'images/skills/python.svg' %}" alt="" srcset="" style="width: 3rem; height: auto;">
-                <p>Python</p>
-            </div>
-            <div class="d-flex flex-column align-items-center me-5">
-                <img src="{% static 'images/skills/django.svg' %}" alt="" srcset="" style="width: 2.5rem; height: auto;">
-                <p>Django</p>
-            </div>
-            <div class="d-flex flex-column align-items-center me-5" style="width: 3rem;">
-                <img src="{% static 'images/skills/git.svg' %}" alt="" srcset="">
-                <p>Git / Github</p>
-            </div>
+        <div class="section_wrapper">
+            <h2 class="fw-bold">Skills</h2>
+            <h4 class="mt-4">General</h4>
+            <h4>
+                <div class="badge bg-primary mb-2 me-2">
+                    <img style="height: 2rem; width: auto;" src="{% static 'images/skills/python.svg' %}" alt="" srcset="" style="width: 3rem; height: auto;">
+                    <span class="ms-2">Python</span>
+                </div>
+                <div class="badge mb-2 me-2" style="background: orange;">
+                    <img style="height: 2rem; width: auto;" src="{% static 'images/skills/git.svg' %}" alt="" srcset="">
+                    <span class="ms-1">Git / GitHub</span>
+                </div>
+            </h4>
+            <h4 class="mt-4">Front-End</h4>
+            <h4>
+                <div class="badge bg-danger mb-2 me-2">
+                    <img style="height: 2rem; width: auto;" src="{% static 'images/skills/html.svg' %}" alt="HTML" srcset="">
+                    <span class="ms-2">HTML</span>
+                </div>
+                <div class="badge bg-info text-dark mb-2 me-2">
+                    <img style="height: 2rem; width: auto;" src="{% static 'images/skills/css.svg' %}" alt="" srcset="">
+                    <span class="ms-2">CSS</span>
+                </div>
+                <div class="badge bg-warning text-dark mb-2 me-2">
+                    <img style="height: 2rem; width: auto;" src="{% static 'images/skills/javascript.svg' %}" alt="" srcset="">
+                    <span class="ms-2">JavaScript</span>
+                </div>
+                <div class="badge mb-2 me-2" style="background: purple;">
+                    <img style="height: 2rem; width: auto;" src="{% static 'images/skills/bootstrap.svg' %}" alt="" srcset="">
+                    <span class="ms-1">Bootstrap</span>
+                </div>
+            </h4>
+            <h4 class="mt-4">Back-End</h4>
+            <h4>
+                <div class="badge bg-success mb-2 me-2">
+                    <img style="height: 2rem; width: auto;" src="{% static 'images/skills/django.svg' %}" alt="" srcset="">
+                    <span class="ms-2">Django</span>
+                </div>
+            </h4>
         </div>
     </div>
     <!-- Projects -->
-    <span class="position-absolute start-0 vw-100 border-bottom border-3"></span>
+    <span class="position-absolute start-0 vw-100 border-bottom border-1"></span>
     <div class="section" id="projects">
-        <h1 class="fw-bold section__heading">Latest Projects</h1>
-        <div class="container m-0 p-0 overflow-hidden">
-            <div class="row w-100 gx-5 gy-5">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card border-0">
-                        <img src="{% static 'images/projects/voting.jpg' %}" alt="voting system" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                <a href="/projects/voting-system" target="_blank" class="text-decoration-none">Voting System</a>
-                            </h5>
-                            <span class="badge bg-primary">Python</span>
-                            <span class="badge bg-success">Django</span>
-                            <span class="badge bg-danger">HTML</span>
-                            <span class="badge bg-info text-dark">CSS</span>
-                            <span class="badge bg-warning text-dark">JavaScript</span>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam hic repudiandae alias atque corrupti.</p>
-                            <div class="w-100 px-4 d-flex justify-content-between">
-                                <a href="https://github.com/SparshChaurasia/VotingApp" target="_blank" class="text-decoration-none text-dark">View on Github <i class="fa-brands fa-github"></i></a>
-                                <a href="http://irps.pythonanywhere.com/" target="_blank" class="text-decoration-none text-dark">View Live <i class="fa-solid fa-link"></i></a>
+        <div class="section_wrapper">
+            <h2 class="fw-bold">Latest Projects</h2>
+            <div class="container m-0 p-0 overflow-hidden">
+                <div class="row w-100 gx-5 gy-5">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card border-0">
+                            <img src="{% static 'images/projects/voting.jpg' %}" alt="voting system" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="/projects/voting-system" target="_blank" class="text-decoration-none">Voting System</a>
+                                </h5>
+                                <span class="badge bg-primary">Python</span>
+                                <span class="badge bg-success">Django</span>
+                                <span class="badge bg-danger">HTML</span>
+                                <span class="badge bg-info text-dark">CSS</span>
+                                <span class="badge bg-warning text-dark">JavaScript</span>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam hic repudiandae alias atque corrupti.</p>
+                                <div class="w-100 px-4 d-flex justify-content-between">
+                                    <a href="https://github.com/SparshChaurasia/VotingApp" target="_blank" class="text-decoration-none text-dark">View on Github <i class="fa-brands fa-github"></i></a>
+                                    <a href="http://irps.pythonanywhere.com/" target="_blank" class="text-decoration-none text-dark">View Live <i class="fa-solid fa-link"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card border-0">
-                        <img src="{% static 'images/projects/discord-bot.jpg' %}" alt="discord bot" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                <a href="/projects/discord-bot" target="_blank" class="text-decoration-none">Discord Bot</a>
-                            </h5>                            
-                            <span class="badge bg-primary">Python</span>
-                            <p class="card-text">A general purpose discord bot built with discord.py api wrapper in python.</p>
-                            <div class="w-100 px-4 d-flex justify-content-between">
-                                <a href="https://github.com/SparshChaurasia/DiscordBot" target="_blank" class="text-decoration-none text-dark">View on Github <i class="fa-brands fa-github"></i></a>
-                                <a href="" target="_blank" class="text-decoration-none text-dark">View Live <i class="fa-solid fa-link"></i></a>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card border-0">
+                            <img src="{% static 'images/projects/discord-bot.jpg' %}" alt="discord bot" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="/projects/discord-bot" target="_blank" class="text-decoration-none">Discord Bot</a>
+                                </h5>                            
+                                <span class="badge bg-primary">Python</span>
+                                <p class="card-text">A general purpose discord bot built with discord.py api wrapper in python.</p>
+                                <div class="w-100 px-4 d-flex justify-content-between">
+                                    <a href="https://github.com/SparshChaurasia/DiscordBot" target="_blank" class="text-decoration-none text-dark">View on Github <i class="fa-brands fa-github"></i></a>
+                                    <a href="" target="_blank" class="text-decoration-none text-dark">View Live <i class="fa-solid fa-link"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card border-0">
-                        <img src="{% static 'images/projects/rfid-attendance.jpg' %}" alt="rfid attendance" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                <a href="/projects/rfid-attendance" target="_blank" class="text-decoration-none">RFID Attendance</a>
-                            </h5>                               
-                            <span class="badge bg-primary">Python</span>
-                            <span class="badge bg-success">Django</span>
-                            <span class="badge bg-danger">HTML</span>
-                            <span class="badge bg-info text-dark">CSS</span>
-                            <span class="badge bg-warning text-dark">JavaScript</span>
-                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam hic repudiandae alias atque corrupti.</p>
-                            <div class="w-100 px-4 d-flex justify-content-between">
-                                <a href="https://github.com/SparshChaurasia/RFIDAttendance" target="_blank" class="text-decoration-none text-dark">View on Github <i class="fa-brands fa-github"></i></a>
-                                <a href="" target="_blank" class="text-decoration-none text-dark">View Live <i class="fa-solid fa-link"></i></a>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card border-0">
+                            <img src="{% static 'images/projects/rfid-attendance.jpg' %}" alt="rfid attendance" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="/projects/rfid-attendance" target="_blank" class="text-decoration-none">RFID Attendance</a>
+                                </h5>                               
+                                <span class="badge bg-primary">Python</span>
+                                <span class="badge bg-success">Django</span>
+                                <span class="badge bg-danger">HTML</span>
+                                <span class="badge bg-info text-dark">CSS</span>
+                                <span class="badge bg-warning text-dark">JavaScript</span>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam hic repudiandae alias atque corrupti.</p>
+                                <div class="w-100 px-4 d-flex justify-content-between">
+                                    <a href="https://github.com/SparshChaurasia/RFIDAttendance" target="_blank" class="text-decoration-none text-dark">View on Github <i class="fa-brands fa-github"></i></a>
+                                    <a href="" target="_blank" class="text-decoration-none text-dark">View Live <i class="fa-solid fa-link"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card border-0">
-                        <img src="{% static 'images/projects/chat-app.jpg' %}" alt="chat app" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                <a href="/projects/chat-app" target="_blank" class="text-decoration-none">Chat App</a>
-                            </h5>                               
-                            <span class="badge bg-primary">Python</span>
-                            <p class="card-text">A command line interface chat app built with pyhton - socket and multithreading.</p>
-                            <div class="w-100 px-4 d-flex justify-content-between">
-                                <a href="https://github.com/SparshChaurasia/ChatAppRewrite" target="_blank" class="text-decoration-none text-dark">View on Github <i class="fa-brands fa-github"></i></a>
-                                <a href="" target="_blank" class="text-decoration-none text-dark">View Live <i class="fa-solid fa-link"></i></a>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card border-0">
+                            <img src="{% static 'images/projects/chat-app.jpg' %}" alt="chat app" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="/projects/chat-app" target="_blank" class="text-decoration-none">Chat App</a>
+                                </h5>                               
+                                <span class="badge bg-primary">Python</span>
+                                <p class="card-text">A command line interface chat app built with pyhton - socket and multithreading.</p>
+                                <div class="w-100 px-4 d-flex justify-content-between">
+                                    <a href="https://github.com/SparshChaurasia/ChatAppRewrite" target="_blank" class="text-decoration-none text-dark">View on Github <i class="fa-brands fa-github"></i></a>
+                                    <a href="" target="_blank" class="text-decoration-none text-dark">View Live <i class="fa-solid fa-link"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -165,58 +171,29 @@
         </div>
     </div>
     <!-- Contact -->
-    <span class="position-absolute start-0 vw-100 border-bottom border-3"></span>
+    <span class="position-absolute start-0 vw-100 border-bottom border-1"></span>
     <div class="section" id="contact">
-        <h1 class="fw-bold section__heading">Contact</h1>
-        <div class="d-flex w-100">
-            <div class="me-5">
-                <div class="d-flex align-items-center mb-4">
-                    <div class="me-3">
-                        <i class="fa-solid fa-2x fa-envelope"></i>
-                    </div>
-                    <div>
-                        <h4 class="m-0">Email</h4>
-                        <span>sparshchaurasia0021@gmail.com</span>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center mb-4">
-                    <div class="me-3">
-                        <i class="fa-solid fa-2x fa-phone"></i>
-                    </div>
-                    <div>
-                        <h4 class="m-0">Phone</h4>
-                        <span>+91 XXX XXX XXXX</span>
-                    </div>
-                </div>
-                <div class="d-flex align-items-center mb-4">
-                    <div class="me-3">
-                        <i class="fa-solid fa-2x fa-location-dot"></i>
-                    </div>
-                    <div>
-                        <h4 class="m-0">Address</h4>
-                        <span>Kanpur, India</span>
-                    </div>
-                </div>
-            </div>
+        <div class="section_wrapper">
+            <h2 class="fw-bold">Contact</h2>
             <form action="{% url 'submit_contact_form' %}" method="post" class="w-100">
                 {% csrf_token %}
-                <div class="input-group mb-3 input-group-lg">
-                    <span class="input-group-text" id="basic-addon1">@</span>
+                <div class="input-group mb-3 input-group">
+                    <span class="input-group-text fw-bold" id="basic-addon1">@</span>
                     <input type="text" class="form-control" name="username" placeholder="Username*" aria-label="Username" aria-describedby="basic-addon1" required>
                 </div>
-                <div class="input-group mb-3 input-group-lg">
+                <div class="input-group mb-3 input-group">
                     <input type="email" class="form-control" name="email" placeholder="Email*" aria-label="Email" aria-describedby="basic-addon2" required>
-                    <span class="input-group-text" id="basic-addon2">@example.com</span>
+                    <span class="input-group-text fw-bold" id="basic-addon2">@example.com</span>
                 </div>
-                <div class="input-group mb-3 input-group-lg">
-                    <span class="input-group-text" id="basic-addon1">Subject</span>
+                <div class="input-group mb-3 input-group">
+                    <span class="input-group-text fw-bold" id="basic-addon1">Subject</span>
                     <input type="text" class="form-control" name="subject" placeholder="Optional Title" aria-label="Subject" aria-describedby="basic-addon1">
                 </div>
-                <div class="input-group input-group-lg">
-                    <span class="input-group-text">Message</span>
+                <div class="input-group input-group">
+                    <span class="input-group-text fw-bold">Message</span>
                     <textarea class="form-control" name="message" placeholder="Your message*" aria-label="With textarea" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-lg custom__button mt-4">Send Message <i class="fa-solid fa-arrow-right"></i></button>
+                <button type="submit" class="btn btn custom__button mt-4 fw-bold">Send Message <i class="fa-solid fa-arrow-right"></i></button>
             </form>
         </div>
     </div>

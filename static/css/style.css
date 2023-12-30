@@ -1,6 +1,11 @@
 /*========== Reusable Classes ==========*/
 .section {
-    padding: 5rem 5rem;
+    overflow: hidden !important;
+    position: relative;
+}
+
+.section_wrapper {
+    padding: 5rem 5rem !important;
 }
 
 .section_margin {
@@ -18,4 +23,8 @@
     box-shadow: 5px 5px #000;
 }
 
-/*========== Hero Section ==========*/
+.video_bg {
+    position: absolute;
+    opacity: 0.2;
+    z-index: -1;
+}
