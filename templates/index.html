@@ -92,9 +92,9 @@
     <div class="section" id="projects">
         <div class="section_wrapper">
             <h2 class="fw-bold">Latest Projects</h2>
-            <div class="container m-0 p-0 overflow-hidden">
+            <div class="container-fluid m-0 p-0 overflow-hidden">
                 <div class="row w-100 gx-5 gy-5">
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col">
                         <div class="card border-0">
                             <img src="{% static 'images/projects/voting.jpg' %}" alt="voting system" class="card-img-top">
                             <div class="card-body">
@@ -114,7 +114,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col">
                         <div class="card border-0">
                             <img src="{% static 'images/projects/discord-bot.jpg' %}" alt="discord bot" class="card-img-top">
                             <div class="card-body">
@@ -130,7 +130,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
+                </div>
+                <div class="row w-100 gx-5 gy-5">
+                    <div class="col">
                         <div class="card border-0">
                             <img src="{% static 'images/projects/rfid-attendance.jpg' %}" alt="rfid attendance" class="card-img-top">
                             <div class="card-body">
@@ -150,7 +152,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
+                    <div class="col">
                         <div class="card border-0">
                             <img src="{% static 'images/projects/chat-app.jpg' %}" alt="chat app" class="card-img-top">
                             <div class="card-body">
@@ -173,6 +175,8 @@
     <!-- Contact -->
     <span class="position-absolute start-0 vw-100 border-bottom border-1"></span>
     <div class="section" id="contact">
+        <video class="video_bg" src="{% static "videos/" %}{% random_int 1 4 %}.mp4" autoplay muted loop>
+        </video>
         <div class="section_wrapper">
             <h2 class="fw-bold">Contact</h2>
             <form action="{% url 'submit_contact_form' %}" method="post" class="w-100">
