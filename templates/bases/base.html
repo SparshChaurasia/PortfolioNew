@@ -28,12 +28,12 @@
     {% block javascript %}{% endblock javascript %}
 </head>
 <body class="body">
-    <header>
-        {% include 'includes/navbar.html' %}
-    </header>
+    <div class="header-spacer border-bottom border-1 section_margin border-start border-end"></div>
+    {% include 'includes/navbar.html' %}
     <main class="border-end border-start border-1 section_margin">
         {% block content %}{% endblock content %}
     </main>
     {% include 'includes/footer.html' %}
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

@@ -57,13 +57,13 @@
 
 /* Project Tile Styles (Book Inspiration) */
 .project-tile {
-    background-color: #fcfcfc;
+    background-color: #ffffff;
     transition: all 0.2s ease-in-out;
     border-color: #e9ecef !important;
 }
 
 .project-tile:hover {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.4);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
@@ -141,7 +141,7 @@
 
 /* Category Card */
 .category-card {
-    background: #fdfdfd;
+    background: transparent;
     border: 1px solid #f0f0f0 !important;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
     transition: all 0.3s ease;
@@ -158,4 +158,103 @@
     letter-spacing: 0.5px;
     text-transform: uppercase;
     color: #6c757d;
+}
+
+/* Hero section text opacity */
+#hero .section_wrapper h5,
+#hero .section_wrapper span,
+#hero .section_wrapper a {
+    opacity: 1;
+}
+
+#hero .section_wrapper p {
+    opacity: 0.75;
+}
+
+/* Side Navbar */
+.side-navbar {
+    position: fixed;
+    left: 4rem;
+    top: 40%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin-bottom: 0.5rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none !important;
+    color: #8e8e8e !important;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.nav-line {
+    width: 2px;
+    height: 35px;
+    background-color: transparent;
+    margin-right: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.nav-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-family: var(--body-font);
+}
+
+.active-section .nav-line {
+    background-color: #212529;
+}
+
+.active-section .nav-text {
+    color: #212529 !important;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.nav-link:hover .nav-text {
+    color: #212529 !important;
+}
+
+@media screen and (max-width: 1400px) {
+    .side-navbar {
+        left: 1.5rem;
+    }
+    .nav-line {
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .side-navbar {
+        display: none;
+    }
+}
+
+/* GitHub Stats */
+.github-card {
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.05));
+}
+
+.github-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Header Spacer */
+.header-spacer {
+    height: 80px;
+    background-color: #ffffff;
 }
